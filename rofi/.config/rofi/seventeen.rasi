@@ -1,0 +1,79 @@
+configuration {
+//   theme:                          "config";
+    show-icons:                     true;
+}
+
+* {
+    //background-color:               transparent;
+    background-color:               #1E2430;
+    background:                     #2E344099;
+    background-alt:                 #E5E9F047;
+    text-color:                     #D8DEE9;
+    selected-text-color:            #000000;
+    primary:                        #A3BE8C;
+    urgent:                         #BF616A;
+}
+
+window {
+    height:                         100%;
+    width:                          100%;
+    location:                       northwest;
+    anchor:                         northwest;
+    x-offset:                       0;
+    y-offset:                       0;
+}
+
+prompt {
+    enabled:                        false;
+}
+
+entry  {
+    font:                           "Proxima Nova 18";
+    expand:                         false;
+    width:                          36em;
+    margin:                         40px 120px 20px 120px;
+    padding:                        4px 8px 2px 8px;
+    border:                         0px 0px solid 2px solid 2px;
+    border-color:                   @background-alt;
+}
+
+listview {
+    columns:                        6;
+    margin:                         40px 120px 40px 120px;
+}
+
+element {
+    orientation:                    vertical;
+    padding:                        8px;
+    margin:                         8px;
+}
+
+element normal.urgent, element alternate.urgent {
+    background-color:               @urgent;
+}
+
+element normal.active, element alternate.active {
+    background-color:               @background-alt;
+}
+
+element selected {
+    background-color:               @background-alt;
+}
+
+element selected.urgent {
+    background-color:               @urgent;
+}
+
+element selected.active {
+    background-color:               @background-alt;
+}
+
+element-icon {
+    size:                           48;
+    border:                         0px;
+}
+
+element-text {
+    expand:                         true;
+    horizontal-align:               0.5;
+}
