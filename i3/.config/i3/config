@@ -58,10 +58,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -186,7 +186,8 @@ bindsym $mod+Print exec flameshot full
 
 # Custom volume button definitions
 
-
+# Lock the screen
+bindsym $mod+l exec light-locker-command -l
 
 
 # Help keybind
@@ -216,6 +217,7 @@ bindsym $mod+F1 exec i3-sensible-terminal -e $HOME/.config/i3/scripts/i3-keybind
 ##}
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id light-locker
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id /usr/bin/nm-applet
 #exec --no-startup-id /usr/bin/pasystray
