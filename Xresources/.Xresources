@@ -1,4 +1,4 @@
-URxvt.font:	xft:Iosevka:size=13:antialias=true
+URxvt.font:	xft:FuraCode Mono Nerd Font:size=13:antialias=true
 URxvt.transparent:   true
 URxvt.shading:       20
 
