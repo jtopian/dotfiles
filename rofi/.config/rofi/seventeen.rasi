@@ -28,7 +28,8 @@ prompt {
 }
 
 entry  {
-    font:                           "Proxima Nova 18";
+    background-color:               @background-alt;
+    font:                           "FuraCode Nerd Font 18";
     expand:                         false;
     width:                          36em;
     margin:                         40px 120px 20px 120px;
@@ -38,7 +39,7 @@ entry  {
 }
 
 listview {
-    columns:                        6;
+    columns:                        5;
     margin:                         40px 120px 40px 120px;
 }
 
@@ -74,6 +75,7 @@ element-icon {
 }
 
 element-text {
+    font:                           "FuraCode Nerd Font 14";
     expand:                         true;
     horizontal-align:               0.5;
 }

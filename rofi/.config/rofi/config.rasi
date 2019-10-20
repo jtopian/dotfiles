@@ -1,7 +1,7 @@
 configuration {
     theme:             "seventeen";
     icon-theme:        "Newaita-dark";
-    font:              "Proxima Nova 11";
+    font:              "FuraCode Nerd Font 13";
 }
 
 * {
@@ -28,7 +28,7 @@ entry {
     background-color:               transparent;
     border:                         0px 0px solid 2px 0px;
     border-color:                   @background-alt;
-    font:                           "Proxima Nova 12";
+    font:                           "FuraCode Nerd Font 14";
 }
 
 mainbox {
