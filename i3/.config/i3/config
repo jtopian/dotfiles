@@ -221,7 +221,6 @@ exec_always --no-startup-id light-locker
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id /usr/bin/nm-applet
 #exec --no-startup-id /usr/bin/pasystray
-exec --no-startup-id /usr/bin/cbatticon
 exec --no-startup-id /usr/bin/compton --blur-background --config ~/.config/compton.conf -b
 exec --no-startup-id /usr/bin/feh --bg-fill $HOME/Pictures/FLCL-UUg7UtU.png
 exec --no-startup-id /usr/bin/tilda
