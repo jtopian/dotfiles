@@ -200,7 +200,7 @@ bindsym $mod+F1 exec i3-sensible-terminal -e $HOME/.config/i3/scripts/i3-keybind
 ##bar {
 ##	i3bar_command i3bar --transparency
 ##
-##        status_command i3status --config ~/.config/i3/i3status.conf
+##        status_command i3status --config $HOME/.config/i3/i3status.conf
 ##
 ##	mode hide
 ##	hidden_state hide
@@ -221,11 +221,11 @@ exec_always --no-startup-id light-locker
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id /usr/bin/nm-applet
 #exec --no-startup-id /usr/bin/pasystray
-exec --no-startup-id /usr/bin/compton --blur-background --config ~/.config/compton.conf -b
+exec --no-startup-id /usr/bin/compton --blur-background --config $HOME/.config/compton.conf -b
 exec --no-startup-id /usr/bin/feh --bg-fill $HOME/Pictures/FLCL-UUg7UtU.png
 exec --no-startup-id /usr/bin/tilda
 exec --no-startup-id /usr/bin/nextcloud
 exec --no-startup-id /usr/bin/synergy
-exec_always ~/.config/i3/scripts/gnome-keyring.sh
+exec_always $HOME/.config/i3/scripts/gnome-keyring.sh
 exec_always --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 exec_always --no-startup-id xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
