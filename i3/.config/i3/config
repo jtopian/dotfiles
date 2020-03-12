@@ -19,12 +19,20 @@ gaps outer 10
 
 ##############
 
+
+# Window customizations
 for_window [class=".*"] border none
 
+title_align center
+default_floating_border normal
 
+for_window [class="KeePassXC"] floating enable
+for_window [class="KeePassXC"] border normal
+for_window [class="Xfce-polkit"] border normal
+for_window [title="Microsoft Teams Notification" class="microsoft teams - preview"] floating enable
+for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Preview"] floating enable 
 
-
-
+# Meta as mod key
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -228,6 +236,7 @@ exec --no-startup-id /usr/bin/feh --bg-fill $HOME/Pictures/FLCL-UUg7UtU.png
 exec --no-startup-id /usr/bin/tilda
 exec --no-startup-id /usr/bin/nextcloud
 exec --no-startup-id /usr/bin/synergy
+exec --no-startup-id /usr/bin/pcmanfm -d
 exec_always $HOME/.config/i3/scripts/gnome-keyring.sh
 exec_always --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 exec_always --no-startup-id xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
