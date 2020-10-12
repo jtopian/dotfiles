@@ -14,8 +14,8 @@
 # You can also use any non-zero value if you'd like to have a border
 #for_window [class=.*] border pixel 0
 
-gaps inner 8
-gaps outer 10
+gaps inner 12
+#gaps outer 6
 
 ##############
 
@@ -29,8 +29,10 @@ default_floating_border normal
 for_window [class="KeePassXC"] floating enable
 for_window [class="KeePassXC"] border normal
 for_window [class="Xfce-polkit"] border normal
-for_window [title="Microsoft Teams Notification" class="microsoft teams - preview"] floating enable
-for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Preview"] floating enable 
+for_window [title="Microsoft Teams Notification"] floating enable
+#for_window [title="Microsoft Teams Notification" class="microsoft teams - preview"] floating enable
+#for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Preview"] floating enable 
+for_window [title="VNC Viewer: Connection Details"] floating enable
 
 # Meta as mod key
 set $mod Mod4
@@ -66,6 +68,7 @@ bindsym $mod+Shift+q kill
 # installed.
 ##bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+Shift+d exec --no-startup-id xfdashboard
 
 # change focus
 #bindsym $mod+j focus left
@@ -194,7 +197,20 @@ bindsym $mod+Print exec flameshot full
 
 
 
-# Custom volume button definitions
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+
 
 # Lock the screen
 bindsym $mod+l exec light-locker-command -l
@@ -228,15 +244,24 @@ bindsym $mod+F1 exec i3-sensible-terminal -e $HOME/.config/i3/scripts/i3-keybind
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id light-locker
+exec --no-startup-id /usr/bin/picom -b --blur-background --config $HOME/.config/picom/picom.conf
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id /usr/bin/nm-applet
 #exec --no-startup-id /usr/bin/pasystray
-exec --no-startup-id /usr/bin/compton --blur-background --config $HOME/.config/compton.conf -b
-exec --no-startup-id /usr/bin/feh --bg-fill $HOME/Pictures/FLCL-UUg7UtU.png
+exec --no-startup-id /usr/bin/pa-applet
+exec --no-startup-id /usr/bin/blueman-applet
+#exec --no-startup-id /usr/bin/compton --blur-background --config $HOME/.config/compton.conf -b
+#exec --no-startup-id /usr/bin/feh --bg-fill $HOME/Pictures/kanti-tearing-wires.jpg
+exec --no-startup-id /usr/bin/feh --bg-fill $HOME/Nextcloud/Photos/backgrounds/Camps_on_the_Shattered_Plains.jpg
 exec --no-startup-id /usr/bin/tilda
 exec --no-startup-id /usr/bin/nextcloud
 exec --no-startup-id /usr/bin/synergy
 exec --no-startup-id /usr/bin/pcmanfm -d
+exec --no-startup-id /usr/bin/discord --start-minimized
+exec --no-startup-id /usr/bin/slack -u
+exec --no-startup-id /usr/bin/redshift-gtk
+exec --no-startup-id /usr/bin/kdeconnect-indicator
+exec --no-startup-id /usr/bin/touchegg
 exec_always $HOME/.config/i3/scripts/gnome-keyring.sh
 exec_always --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
-exec_always --no-startup-id xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
+exec_always --no-startup-id xinput --set-prop "DLL096D:01 06CB:CDE6 Touchpad" "libinput Natural Scrolling Enabled" 1
