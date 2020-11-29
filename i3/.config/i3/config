@@ -163,16 +163,16 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+1 workspace $ws1; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+2 workspace $ws2; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+3 workspace $ws3; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+4 workspace $ws4; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+5 workspace $ws5; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+6 workspace $ws6; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+7 workspace $ws7; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+8 workspace $ws8; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+9 workspace $ws9; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+0 workspace $ws10; exec $HOME/.local/bin/i3tree.py;
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -185,6 +185,22 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+
+# move and follow focused container to workspace
+bindsym $mod+Ctrl+Shift+1 move container to workspace $ws1; workspace $ws1; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+Ctrl+Shift+2 move container to workspace $ws2; workspace $ws2; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+Ctrl+Shift+3 move container to workspace $ws3; workspace $ws3; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+Ctrl+Shift+4 move container to workspace $ws4; workspace $ws4; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+Ctrl+Shift+5 move container to workspace $ws5; workspace $ws5; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+Ctrl+Shift+6 move container to workspace $ws6; workspace $ws6; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+Ctrl+Shift+7 move container to workspace $ws7; workspace $ws7; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+Ctrl+Shift+8 move container to workspace $ws8; workspace $ws8; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+Ctrl+Shift+9 move container to workspace $ws9; workspace $ws9; exec $HOME/.local/bin/i3tree.py;
+bindsym $mod+Ctrl+Shift+0 move container to workspace $ws10; workspace $ws10; exec $HOME/.local/bin/i3tree.py;
+
+# move focused workspace between monitors
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
