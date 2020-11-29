@@ -24,15 +24,44 @@ gaps inner 12
 for_window [class=".*"] border none
 
 title_align center
-default_floating_border normal
+default_floating_border normal 2
 
+#KeePassXC
 for_window [class="KeePassXC"] floating enable
 for_window [class="KeePassXC"] border normal
+
+# XFCE PolKit
 for_window [class="Xfce-polkit"] border normal
+
+# MS Teams
 for_window [title="Microsoft Teams Notification"] floating enable
 #for_window [title="Microsoft Teams Notification" class="microsoft teams - preview"] floating enable
 #for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Preview"] floating enable 
+
+# TigerVNC
 for_window [title="VNC Viewer: Connection Details"] floating enable
+
+# Firefox
+for_window [title="^Library$|^Page Info"] floating enable
+for_window [title="^Library$|^Page Info"] border normal 3
+for_window [title="^Library$|^Page Info"] resize set 900 700
+for_window [title="^Library$|^Page Info"] move position center
+
+# OBS
+for_window [title="V4l2sinkProperties"] floating enable
+for_window [title="V4l2sinkProperties"] border normal 3
+
+# Steam
+for_window [title="Steam - News*"] floating enable
+for_window [title="Steam - News*"] border normal 3
+for_window [title="Steam - News*"] resize set 635 840
+for_window [title="Steam - News*"] move position center
+
+# Calculator
+for_window [title="^Calculator$"] floating enable
+for_window [title="^Calculator$"] border pixel 3
+for_window [title="^Calculator$"] resize set 360 406
+for_window [title="^Calculator$"] move position center
 
 # Meta as mod key
 set $mod Mod4
