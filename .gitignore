@@ -1,3 +1,4 @@
 *.bak
 *.brok
 i3/.config/i3/config
+i3/.config/i3/conf.d/90-local.conf
