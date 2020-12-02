@@ -2,6 +2,7 @@ configuration {
     theme:             "seventeen";
     icon-theme:        "Newaita-dark";
     font:              "FuraCode Nerd Font 13";
+    kb-cancel:    "Super_L,Escape";
 }
 
 * {
