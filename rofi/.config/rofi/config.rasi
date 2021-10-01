@@ -1,66 +1,91 @@
+/** Global config file **/
+
 configuration {
-    theme:             "seventeen";
-    icon-theme:        "Newaita-dark";
-    font:              "FuraCode Nerd Font 13";
-    kb-cancel:    "Super_L,Escape";
+  show-icons:         true;
+  icon-theme:         "Papirus";
+  font:               "Source Code Pro Medium 20";
+  kb-cancel:          "Super_L,Escape";
+  sidebar-mode:       true;
+
 }
 
 * {
-    background-color:               transparent;
-    background:                     #2E344099;
-    background-alt:                 #E5E9F047;
-    text-color:                     #D8DEE9;
-    selected-text-color:            #000000;
-    primary:                        #A3BE8C;
-    urgent:                         #BF616A;
+  separatorcolor:              @foreground;
+  border-color:                @foreground;
+  transparency:                "real";
+  spacing:                     2;
+
+  dark-grey:                   #221D18;
+  light-grey:                  #9A9595;
+  tangerine:                   #EA7E0B;
+  dark-green:                  #0F9672;
+  light-green:                 #9BDEAC;
+  orange:                      #F90;
+  jadegreen:                   #0F9;
+  lightfg:                     @light-grey;
+  lightbg:                     @dark-green;
+
+  text-color:                  @dark-green;
+  background:                  @dark-grey;
+  background-alt:              @dark-grey;
+  foreground:                  @dark-green;
+  background-color:            transparent;
+
+  active-background:           @background-alt;
+  active-foreground:           @text-color;
+
+  normal-background:           @background;
+  normal-foreground:           @text-color;
+
+  urgent-background:           @background-alt;
+  urgent-foreground:           @orange;
+
+  selected-text-color:         @text-color;
+  selected-active-background:  @dark-grey;
+  selected-active-foreground:  @dark-green;
+  selected-normal-background:  @dark-grey;
+  selected-normal-foreground:  @light-green;
+  selected-urgent-background:  @orange;
+  selected-urgent-foreground:  @background;
+
+  alternate-active-background: @lightbg;
+  alternate-active-foreground: @background;
+  alternate-normal-background: @background-alt;
+  alternate-normal-foreground: @foreground;
+  alternate-urgent-background: @urgent;
+  alternate-urgent-foreground: @orange;
 }
 
 window {
-    transparency:                   "real";
-    background-color:               @background;
-}
-
-prompt {
-    enabled:                        false;
-}
-
-entry {
-    padding:                        10px 10px 10px 10px;
-    background-color:               transparent;
-    border:                         0px 0px solid 2px 0px;
-    border-color:                   @background-alt;
-    font:                           "FuraCode Nerd Font 14";
+  transparency:      "real";
+  background-color:  @background;
+  color:             @text-color;
+  border-radius:     8;
+  location:          west;
+  x-offset:          12;
+  y-offset:          24;
+  height:            90%;
+  width:             24%;
+  children:          [ mainbox ];
 }
 
 mainbox {
-    padding:                        10px 40px 10px 40px;
+  children:          [ mode-switcher, inputbar, message, listview ];
 }
 
-element {
-    padding:                        8px;
+inputbar {
+    padding:    1px ;
+    spacing:    0px ;
+    text-color: var(normal-foreground);
+    children:   [ prompt,textbox-prompt-colon,entry,num-filtered-rows,textbox-num-sep,num-rows
+,case-indicator ];
 }
 
-element normal.urgent, element alternate.urgent {
-    background-color:               @urgent;
+case-indicator {
+  text-color: @light-grey;
 }
 
-element normal.active, element alternate.active {
-    background-color:               @background-alt;
-    color:                          @selected-text-color;
+entry {
+  text-color:        @FFF;
+  placeholder-color: @light-grey;
 }
-
-element selected {
-    background-color:               @background-alt;
-    color:                          @selected-text-color;
-}
-
-element selected.urgent {
-    background-color:               @urgent;
-}
-
-element selected.active {
-    background-color:               @background-alt;
-    color:                          @selected-text-color;
-}
-
-
