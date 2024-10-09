@@ -3,7 +3,7 @@
 configuration {
   show-icons:         true;
   icon-theme:         "Papirus";
-  font:               "Source Code Pro Medium 20";
+  font:               "Source Code Pro Medium 14";
   kb-cancel:          "Super_L,Escape";
   sidebar-mode:       true;
 
@@ -15,6 +15,9 @@ configuration {
   transparency:                "real";
   spacing:                     2;
 
+  cocoa-brown:                 #D0621E;
+  milk-cocoa:                  #D06C2E;
+  darker-grey:                 #0A0A0A;
   dark-grey:                   #221D18;
   light-grey:                  #9A9595;
   tangerine:                   #EA7E0B;
@@ -25,10 +28,10 @@ configuration {
   lightfg:                     @light-grey;
   lightbg:                     @dark-green;
 
-  text-color:                  @dark-green;
-  background:                  @dark-grey;
-  background-alt:              @dark-grey;
-  foreground:                  @dark-green;
+  text-color:                  @cocoa-brown;
+  background:                  @darker-grey;
+  background-alt:              @darker-grey;
+  foreground:                  @cocoa-brown;
   background-color:            transparent;
 
   active-background:           @background-alt;
@@ -42,9 +45,9 @@ configuration {
 
   selected-text-color:         @text-color;
   selected-active-background:  @dark-grey;
-  selected-active-foreground:  @dark-green;
+  selected-active-foreground:  @tangerine;
   selected-normal-background:  @dark-grey;
-  selected-normal-foreground:  @light-green;
+  selected-normal-foreground:  @tangerine;
   selected-urgent-background:  @orange;
   selected-urgent-foreground:  @background;
 
@@ -52,7 +55,7 @@ configuration {
   alternate-active-foreground: @background;
   alternate-normal-background: @background-alt;
   alternate-normal-foreground: @foreground;
-  alternate-urgent-background: @urgent;
+  alternate-urgent-background: @urgent-background;
   alternate-urgent-foreground: @orange;
 }
 
@@ -60,12 +63,12 @@ window {
   transparency:      "real";
   background-color:  @background;
   color:             @text-color;
-  border-radius:     8;
-  location:          west;
-  x-offset:          12;
-  y-offset:          24;
-  height:            90%;
-  width:             24%;
+  border-radius:     9;
+  location:          north;
+  x-offset:          0;
+  y-offset:          33%;
+  height:            34%;
+  width:             60%;
   children:          [ mainbox ];
 }
 
@@ -86,6 +89,6 @@ case-indicator {
 }
 
 entry {
-  text-color:        @FFF;
+  text-color:        #FFF;
   placeholder-color: @light-grey;
 }
