@@ -1,0 +1,11 @@
+[Unit]
+Description=Idle manager for Hyprland
+Documentation=https://wiki.hyprland.org/Hypr-Ecosystem/hyprlock/
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/hypridle
+
+[Install]
+WantedBy=hyprland-session.target
