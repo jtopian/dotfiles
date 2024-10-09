@@ -1,6 +1,6 @@
 ## Usage
 
-    git clone https://gitlab.jtopia.org/xaxas/i3-dotfiles.git ~/.stow-gui
+    git clone git@github.com:jtopian/gui-dotfiles.git ~/.stow-gui
     cd .stow-gui
     stow <desired app config>
     # easy mode:
@@ -17,3 +17,7 @@ with `$mod+r`. So far, reloading config with `$mod+c` has led to crashes :(
 Requires the i3ipc module for Python, install with pip like so:
 
     pip install --user i3ipc
+
+## Hyprland
+
+This hyprland config depends on `waybar` (config not included in this repository), as it references the waybar.service unit file in the requirements for the hyprland-session.target.
