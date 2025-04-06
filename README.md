@@ -1,3 +1,8 @@
+# JT's Dotfiles
+These files make up most of my Linux ux. Hopefully you find something useful here.
+
+![Screenshot of my desktop with tmux and rofi visible](images/desktop.png?raw=true "Desktop screenshot")
+
 ## Usage
 ```
 git clone git@github.com:jtopian/dotfiles.git ~/.config/dotfiles
