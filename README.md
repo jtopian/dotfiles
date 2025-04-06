@@ -1,12 +1,9 @@
 ## Usage
 ```
-git clone git@github.com:jtopian/gui-dotfiles.git ~/.stow-gui
-cd .stow-gui
+git clone git@github.com:jtopian/dotfiles.git ~/.config/dotfiles
+cd .config/dotfiles
 # Use --adopt with caution!
 stow -t $HOME --dotfiles --no-folding [--adopt] <app to stow>
-
-# easy mode:
-# for i in compton dunst i3 polybar rofi Xresources; do stow $i; done
 ```
 
 ## i3
@@ -21,6 +18,8 @@ Requires the i3ipc module for Python, install with pip like so:
 
     pip install --user i3ipc
 
+Oof, there's probably a better way to do that. I don't want to ship venvs, though. Hmmm.
+
 ## Hyprland
 
-This hyprland config depends on `waybar` (config not included in this repository), as it references the waybar.service unit file in the requirements for the hyprland-session.target.
+This hyprland config depends on `waybar`, as it references the waybar.service unit file in the requirements for the hyprland-session.target. If you do not wish to use waybar, adjust `hyprland/dot-config/systemd/user/hyprland-session.target` as necessary.
