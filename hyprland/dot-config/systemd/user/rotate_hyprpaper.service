@@ -1,0 +1,10 @@
+[Unit]
+Description=Rotate hyprpaper backgrounds every 10 minutes
+Wants=rotate_hyprpaper.timer
+
+[Service]
+Type=oneshot
+ExecStart=/home/xaxas/.local/bin/rotate_hyprpaper.sh
+
+[Install]
+WantedBy=multi-user.target

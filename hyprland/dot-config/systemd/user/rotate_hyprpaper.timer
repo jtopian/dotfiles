@@ -1,0 +1,10 @@
+[Unit]
+Description=Rotate hyprpaper backgrounds every 10 minutes
+Requires=rotate_hyprpaper.service
+
+[Timer]
+OnUnitActiveSec=10min
+Unit=rotate_hyprpaper.service
+
+[Install]
+WantedBy=timers.target

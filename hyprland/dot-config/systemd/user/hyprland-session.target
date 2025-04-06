@@ -7,3 +7,4 @@ After=graphical-session-pre.target
 Wants=graphical-session-pre.target
 Before=waybar.service
 Requires=waybar.service
+Requires=rotate_hyprpaper.timer
