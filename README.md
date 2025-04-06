@@ -1,10 +1,13 @@
 ## Usage
+```
+git clone git@github.com:jtopian/gui-dotfiles.git ~/.stow-gui
+cd .stow-gui
+# Use --adopt with caution!
+stow -t $HOME --dotfiles --no-folding [--adopt] <app to stow>
 
-    git clone git@github.com:jtopian/gui-dotfiles.git ~/.stow-gui
-    cd .stow-gui
-    stow <desired app config>
-    # easy mode:
-    # for i in compton dunst i3 polybar rofi Xresources; do stow $i; done
+# easy mode:
+# for i in compton dunst i3 polybar rofi Xresources; do stow $i; done
+```
 
 ## i3
 
