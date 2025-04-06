@@ -5,3 +5,5 @@ Requires=basic.target
 BindsTo=graphical-session.target
 After=graphical-session-pre.target
 Wants=graphical-session-pre.target
+Before=waybar.service
+Requires=waybar.service
