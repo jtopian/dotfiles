@@ -1,0 +1,49 @@
+set shell=/bin/bash
+set nocompatible              " required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=$HOME/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('$HOME/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" add all your plugins here (note older versions of Vundle
+" used Bundle instead of Plugin)
+
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+set encoding=utf-8
+
+" Easier on the eyes
+colorscheme elflord
+let python_highlight_all=1
+syntax on
+
+" Customized settings by JT
+setlocal shiftwidth=0
+
+autocmd Filetype python setlocal tabstop=4
+autocmd Filetype python setlocal softtabstop=4
+autocmd Filetype python setlocal expandtab
+
+
+if exists('+colorcolumn')
+  autocmd Filetype python set colorcolumn=80
+else
+  autocmd Filetype python au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+
+" Treat .rasi files as css
+au BufNewFile,BufRead /*.rasi setf css
