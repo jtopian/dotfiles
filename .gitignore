@@ -2,3 +2,4 @@
 *.brok
 i3/.config/i3/config
 i3/.config/i3/conf.d/90-local.conf
+hyprland/dot-config/hypr/monitors.conf.test
