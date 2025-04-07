@@ -4,7 +4,7 @@ Wants=rotate_hyprpaper.timer
 
 [Service]
 Type=oneshot
-ExecStart=/home/xaxas/.local/bin/rotate_hyprpaper.sh
+ExecStart=%h/.local/bin/rotate_hyprpaper.sh
 
 [Install]
 WantedBy=multi-user.target
