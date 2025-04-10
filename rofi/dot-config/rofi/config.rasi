@@ -4,7 +4,7 @@ configuration {
   show-icons:         true;
   icon-theme:         "Papirus";
   font:               "Source Code Pro Medium 14";
-  kb-cancel:          "Super_L,Escape";
+  kb-cancel:          "Escape";
   sidebar-mode:       true;
 
 }
