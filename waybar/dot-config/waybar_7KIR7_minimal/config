@@ -146,7 +146,7 @@
     "exec-if": "pgrep ffmpeg",
 },
 "custom/applications": {
-    "format": "Applications",
+    "format": "󰣇   Arch Linux",
     "tooltip": true,
     "tooltip-format": "Toggle rofi menu",
     "on-click": "bash ~/.local/bin/toggle_rofi.sh"
