@@ -168,9 +168,5 @@
     "tooltip": true,
     "tooltip-format": "Change Wallpapers",
     "on-click": "bash ~/.local/bin/rotate_hyprpaper.sh"
-},
-"custom/spacer": {
-    "format": "    ",
-    "tooltip": false
- }
+}
 }
