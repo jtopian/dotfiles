@@ -5,9 +5,9 @@
 "margin-bottom":0,
 "margin-top":0,
 
-"modules-left": ["custom/applications","custom/spacer","hyprland/window"],
+"modules-left": ["custom/applications","hyprland/window"],
 "modules-center": ["custom/superplus","hyprland/workspaces"],
-"modules-right":  ["mpd","network","cpu","memory","tray","idle_inhibitor","custom/rotate_hyprpaper","pulseaudio","backlight","battery","custom/off","clock"],
+"modules-right":  ["mpd","tray","idle_inhibitor","custom/rotate_hyprpaper","pulseaudio","backlight","battery","custom/off","clock"],
 
 "battery": {
   "states": {
