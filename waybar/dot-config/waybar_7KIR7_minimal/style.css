@@ -31,8 +31,11 @@ window#waybar {
     background: #7C9D96;
 }
 
+#mpd{
+  padding: 0 5px;
+}
+
 #tray,
-#mpd,
 #custom-weather,
 #cpu, 
 #temperature, 
