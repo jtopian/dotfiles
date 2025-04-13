@@ -25,7 +25,7 @@
     "on-click": "activate"
 },
 "hyprland/window": {
-    "max-length": 200,
+    "max-length": 40,
     "separate-outputs": true
 },
 "sway/mode": {
