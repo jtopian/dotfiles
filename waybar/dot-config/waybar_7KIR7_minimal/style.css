@@ -33,6 +33,29 @@ window#waybar {
     background: rgba(208, 98, 30, .7);
 }
 
+#window,
+.modules-center,
+.modules-right{
+  background: rgb(172,172,172);
+  background: linear-gradient(180deg, rgba(110,110,110,1) 0%, rgba(1,1,66,.25) 72%);
+}
+
+/*.modules-left{
+  border-radius: 0px 5px 15px 3px;
+  padding: 0px 10px 0px 0px;
+}*/
+
+#window,
+.modules-center{
+  border-radius: 3px 3px 15px 15px;
+  padding: 0px 10px 0px 10px;
+}
+
+.modules-right{
+  border-radius: 3px 0px 3px 15px;
+  padding: 0px 0px 0px 10px;
+}
+
 #mpd{
   padding: 0 5px;
 }
