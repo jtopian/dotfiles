@@ -152,7 +152,7 @@
     "on-click": "bash ~/.local/bin/toggle_rofi.sh"
 },
 "custom/superplus": {
-    "format": "   +",
+    "format": " ",
     "tooltip": true,
     "tooltip-format": "Window switcher",
     "on-click": "bash ~/.local/bin/toggle_rofi.sh window"
