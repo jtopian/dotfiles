@@ -88,7 +88,13 @@ window#waybar {
   /*border: 2px solid #D0621E;*/
 }
 #clock, #custom-applications, #custon-superplus, #tray{ 
-    /*margin-right: 10px;*/
-    /*background-color: #0A0A0A;*/
-    border: 2px solid #D0621E;
+  /*margin-right: 10px;*/
+  /*background-color: #0A0A0A;*/
+  border-width: 0px 2px 2px 0px;
+  border-style: solid;
+  /*border-color: #D0621E;*/
+  border-color: rgba(208, 98, 30, .5);
+  border-radius: 3px;
+  background: rgb(172,172,172);
+  background: linear-gradient(180deg, rgba(90,90,90,1) 0%, rgba(1,1,1,1) 72%);
 }
