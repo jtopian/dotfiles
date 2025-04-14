@@ -80,12 +80,12 @@ window#waybar {
 #custom-off,
 #custom-rotate_hyprpaper,
 #network{
-    padding: 0 10px;
-    border-radius: 15px;
-    font-weight: bolder;
-    /*background-color: #221D18;*/
-    background-color: #0A0A0A;
-    /*border: 2px solid #D0621E;*/
+  padding: 0 5px;
+  /*border-radius: 5px;*/
+  font-weight: bolder;
+  /*background-color: #221D18;*/
+  /*background-color: #0A0A0A;*/
+  /*border: 2px solid #D0621E;*/
 }
 #clock, #custom-applications, #custon-superplus, #tray{ 
     /*margin-right: 10px;*/
