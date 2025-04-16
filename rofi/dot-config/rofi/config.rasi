@@ -7,6 +7,11 @@ configuration {
   kb-cancel:          "Escape";
   sidebar-mode:       true;
 
+  /* Thanks Shamaoke from Reddit for these three */
+  /* options to enable single-click activation */
+  hover-select: true;
+  me-select-entry: "";
+  me-accept-entry: [ MousePrimary, MouseSecondary, MouseDPrimary ];
 }
 
 * {
