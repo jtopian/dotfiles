@@ -1,0 +1,8 @@
+# Copy this file to keybinds.conf and add any device-specific keybinds
+# You want the target file to end up as a regular file on the target sysstem,
+# so from ~/.config/hyprland (which should be full of symlinks), use this command:
+# cp -L keybinds.conf.example keybinds.conf
+
+# For example, unlocking a LUKS drive that is unique to each machine
+## Unlock luks key
+#bind = $mainMod SHIFT, k, exec, $HOME/.local/bin/padlock 38b3f732-abff-4e57-be6c-43d574cff851
