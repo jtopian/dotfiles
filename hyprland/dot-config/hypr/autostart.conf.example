@@ -1,0 +1,7 @@
+# Copy this file to autostart.conf and add any device-specific autostarts
+# You want the target file to end up as a regular file on the target sysstem,
+# so from ~/.config/hyprland (which should be full of symlinks), use this command:
+# cp -L autostart.conf.example autostart.conf
+
+$ For example, auto-starting noisetorch with a specific device that is only present on one machine
+#exec-once = /usr/bin/noisetorch -i alsa_input.usb-046d_HD_Pro_Webcam_C920_6B3C2D4F-02.analog-stereo
