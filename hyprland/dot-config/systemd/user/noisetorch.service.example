@@ -1,0 +1,12 @@
+[Unit]
+Description=apply noisetorch filter on microphone
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+# Check available outputs with `noisetorch -l`
+ExecStart=/usr/bin/noisetorch -i alsa_input.usb-046d_HD_Pro_Webcam_C920_6B3C2D4F-02.iec958-stereo
+#ExecStop=/usr/bin/noisetorch -u
+
+[Install]
+WantedBy=hyprland-session.target
